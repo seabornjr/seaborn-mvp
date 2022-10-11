@@ -3,7 +3,7 @@
 module.exports = {
     
     dev: {
-        connectionString: 'postgres://postgres:postgrespw@localhost:55002/popsingers',
+        connectionString: 'postgres://postgres:postgrespw@localhost:55000/artistlist',
         PORT: 8002
     },
     

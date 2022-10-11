@@ -1,0 +1,31 @@
+h2 {
+    color: white;
+    text-align: center;
+}
+
+#header {
+     color: white;
+     text-align: center;
+}
+
+body {
+
+    background-color: black;
+
+}
+#btn_submit {
+    text-align: center;
+}  
+
+#artist-name {
+    align-items: center;
+}
+#artistCard {
+    text-align: center;
+    background-color: bisque;
+    border: 15pt solid;
+    border-color: brown;
+    padding: 15pt;
+
+    
+}

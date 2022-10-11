@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    <title>Artist Wiki</title>
+</head>
+<body>
+    <header id="header">Welcome to the artist wiki</header>
+    <h2 id="h1">Select an artist from the drop down to see Bio and Top Hits</h2>
+    <label for="artist-names">Choose an artist name:</label>
+    <button type="submit" id="btn_submit" class="button"> Top 2 Artists </button>
+    <button type="submit" id="addArtist" class="btn_submit" title="Add Artist"> Add Artist</button>
+    <select name="artist-names" id="artist-name">
+        <option default value="">Select a artist name</option>
+        <option value="beyonce">Beyonce</option>
+    <option value="Shakira">Shakira</option>
+    </select>
+    <div id="form" ></div>
+    <div id="results" ></div>
+    <script src="app.js"></script>
+</body>
+</html>
