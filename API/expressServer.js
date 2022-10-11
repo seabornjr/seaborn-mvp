@@ -4,7 +4,7 @@ const { Client } = require('pg');
 var cors = require('cors')
 var bodyParser = require('body-parser');
 const { application } = require('express');
-const config = require('./config')[process.env.NODE_ENV || "dev"]
+const config = require('./config')[process.env.NODE_ENV || "production"]
 const PORT = config.PORT
 const client = new Client({
     connectionString: config.connectionString

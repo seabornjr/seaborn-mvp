@@ -2,7 +2,7 @@
 
 
 
-var ENV = 'dev';
+var ENV = 'production';
 
 var resultsDiv = document.getElementById("results")
 var dropdown = document.getElementById('artist-name'); 
@@ -22,7 +22,7 @@ function getArtist() {
     console.log('look at us go')
 
     //get the data and build cards and the drop down list 
-    fetch(`http://localhost:8002/artists`)
+    fetch(APIURL)
     .then(res => res.json())
     .then(data => {
         data.map(artists => {
