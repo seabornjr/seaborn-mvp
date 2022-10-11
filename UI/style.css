@@ -8,6 +8,14 @@ h2 {
      text-align: center;
 }
 
+.form-text {
+    color: white;
+}
+
+#form {
+    align-items: center;
+}
+
 body {
 
     background-color: black;

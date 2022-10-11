@@ -3,6 +3,7 @@ const express = require('express');
 const { Client } = require('pg');
 var cors = require('cors')
 var bodyParser = require('body-parser');
+const { application } = require('express');
 const config = require('./config')[process.env.NODE_ENV || "dev"]
 const PORT = config.PORT
 const client = new Client({
@@ -31,19 +32,29 @@ app.get('/artists', (req, res) => {
         })
 })
 
+app.get('/artists/:id', (req, res) => {
+    client.query('SELECT * FROM artists WHERE artist_id = ' + req.params.id)
+        .then(result => {
+            res.send(result.rows)
+        })
+})
 
-// app.post('/artists', (req, res) => {
-//     const { singer_name } = req.body;
-//     client.query('INSERT INTO singers (singer_name) VALUES ($1)', [singer_name],
-//         (error, results) => {
-//             if (error) {
-//                 throw error
-//             }
-//             res.status(201).send('Singer Added')
-//         })
-// })
+app.post('/artists', (req, res) => {
+    const { artist_name, artist_bio, artist_image, artist_url } = req.body;
+    client.query('INSERT INTO artists (artist_name, artist_bio, artist_image, artist_url) VALUES ($1, $2, $3, $4)', [artist_name, artist_bio, artist_image, artist_url],
+        (error, results) => {
+            if (error) {
+                throw error
+            }
+            res.status(201).send('Artist Added')
+        })
+})
 
-
+app.delete('/artists/:id', (req, res) => {
+    client.query('DELETE FROM artists WHERE artist_id = '+ req.params.id + ';')
+    .then(res.status(201).send('record deleted successfully'))
+    .catch(function(error){console.log(error);});
+})
 app.listen(PORT, () => {
     console.log(`Our app is running on ${PORT}`)
 });

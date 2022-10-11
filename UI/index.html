@@ -9,16 +9,20 @@
 </head>
 <body>
     <header id="header">Welcome to the artist wiki</header>
-    <h2 id="h1">Select an artist from the drop down to see Bio and Top Hits</h2>
-    <label for="artist-names">Choose an artist name:</label>
-    <button type="submit" id="btn_submit" class="button"> Top 2 Artists </button>
-    <button type="submit" id="addArtist" class="btn_submit" title="Add Artist"> Add Artist</button>
-    <select name="artist-names" id="artist-name">
-        <option default value="">Select a artist name</option>
-        <option value="beyonce">Beyonce</option>
-    <option value="Shakira">Shakira</option>
-    </select>
-    <div id="form" ></div>
+    <h2 id="h1">Click the favorites button to view cards for your favorite artists</h2>
+    <label for="artist-names" class="form-text">Click here to view your favorites:</label>
+    <button type="submit" id="btn_submit" class="button"> My Faviorite Artists </button>
+    <div id="form" >
+        <label for="artist-names" class="form-text">Enter an Artist to add to list:</label>
+        <input type="text" placeholder="Search.." id="wikiSearch" class="seachField"> <button type="add" id="artistSearch">Add Artist</button>
+        <div>
+            <label for="artist-names" class="form-text">Seletct from dropdown and click delete to remove:</label>
+            <button type="delete" id="delete-button">Delete Artist</button>
+            <select name="artist-names" id="artist-name">
+                <option default value="">Select a artist name</option>
+            </select>
+        </div>
+    </div>
     <div id="results" ></div>
     <script src="app.js"></script>
 </body>
