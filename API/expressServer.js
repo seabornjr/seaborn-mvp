@@ -3,7 +3,6 @@ const express = require('express');
 const { Client } = require('pg');
 var cors = require('cors')
 var bodyParser = require('body-parser');
-const { app } = require('express');
 const config = require('./config')[process.env.NODE_ENV || "production"]
 const PORT = config.port
 const client = new Client({
