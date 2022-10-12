@@ -6,7 +6,7 @@ var ENV = 'production';
 
 var resultsDiv = document.getElementById("results")
 var dropdown = document.getElementById('artist-name'); 
-let APIURL = ENV === 'dev' ? "http://localhost:8002" : 'https://artist-api.onrender.com'
+let APIURL = 'https://artist-api.onrender.com'
 
 
 
