@@ -8,7 +8,7 @@ module.exports = {
     },
     
     production: {
-        connectionString: 'postgres://artists_sql_user:O8ysXhzuZyky48XwZU077lnAfo0Xw7no@dpg-cd2tc702i3mvvgbp5hl0-a.oregon-postgres.render.com/artists_sql' + "?ssl=true",
+        connectionString: proccess.env.POSTGRES_CONNECTION_STRING + "?ssl=true",
         port: process.env.PORT
     }
 }
