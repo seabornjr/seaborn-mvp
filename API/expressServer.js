@@ -5,7 +5,7 @@ var cors = require('cors')
 var bodyParser = require('body-parser');
 const { application } = require('express');
 const config = require('./config')[process.env.NODE_ENV || "production"]
-const PORT = config.PORT
+const PORT = config.port
 const client = new Client({
     connectionString: config.connectionString
 })
