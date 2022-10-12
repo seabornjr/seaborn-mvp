@@ -1,9 +1,9 @@
 
-const express = require('express');
 const { Client } = require('pg');
+const express = require('express');
 var cors = require('cors')
 const config = require('./config.js')[process.env.NODE_ENV || "production"]
-const PORT = config.port
+const PORT = process.env.PORT;
 console.log(PORT);
 const client = new Client({
     connectionString: config.connectionString
