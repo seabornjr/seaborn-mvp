@@ -3,10 +3,10 @@ const { Client } = require('pg');
 const express = require('express');
 var cors = require('cors')
 const config = require('./config.js')[process.env.NODE_ENV || "dev"]
-const PORT = process.env.PORT;
+const PORT = config.port //process.env.PORT;
 console.log(PORT);
 const client = new Client({
-    connectionString: "postgres://artists_sql_user:O8ysXhzuZyky48XwZU077lnAfo0Xw7no@dpg-cd2tc702i3mvvgbp5hl0-a.oregon-postgres.render.com/artists_sql" + "?ssl=true"
+    connectionString: config.connectionString//"postgres://artists_sql_user:O8ysXhzuZyky48XwZU077lnAfo0Xw7no@dpg-cd2tc702i3mvvgbp5hl0-a.oregon-postgres.render.com/artists_sql" + "?ssl=true"
 })
 
 
