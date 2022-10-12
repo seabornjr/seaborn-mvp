@@ -21,7 +21,10 @@ app.use('/', express.static('public'));
 
 
 app.get('/', (req, res) => {
-    res.send("wuddup")
+    client.query('SELECT * FROM artists')
+    .then(result => {
+        res.send(result.rows)
+    })
 })
 
 app.get('/artists', (req, res) => {

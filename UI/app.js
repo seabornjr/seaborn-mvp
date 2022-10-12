@@ -72,7 +72,7 @@ function getArtist() {
     
     function getArtistById(id) {
         resultsDiv.innerHTML = '';
-        fetch(`http://localhost:8002/artists/${id}`)
+        fetch(APIURL`/${id}`)
         .then(res => res.json())
         .then(data => {
             data.map(artists => {
