@@ -1,8 +1,15 @@
 h2 {
     color: white;
     text-align: center;
+    
 }
 
+#selection {
+    width: 100%;
+    background-color: black;
+    opacity : .6;
+    padding: 0.5em;
+}
 #header {
      color: white;
      text-align: center;
@@ -13,16 +20,18 @@ h2 {
 }
 
 #form {
-    align-items: center;
+    display: flex;
 }
 
 body {
 
-    background-color: black;
-
+    background-image: url('https://media.pitchfork.com/photos/5a6b965dac1772290766cae6/2:1/w_1280/GrammyTopicPage2.jpg');
+    
 }
 #btn_submit {
     text-align: center;
+    display: center;
+    
 }  
 
 #artist-name {
@@ -32,7 +41,8 @@ body {
     text-align: center;
     background-color: bisque;
     border: 15pt solid;
-    border-color: brown;
+    border-color: black;
+    opacity: .8;
     padding: 15pt;
 
     
